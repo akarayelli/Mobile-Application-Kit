@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		8A54E4261FEB91CD008BC22B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E4251FEB91CD008BC22B /* AppDelegate.swift */; };
-		8A54E4281FEB91CD008BC22B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E4271FEB91CD008BC22B /* ViewController.swift */; };
+		8A54E4281FEB91CD008BC22B /* IconGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E4271FEB91CD008BC22B /* IconGeneratorViewController.swift */; };
 		8A54E42A1FEB91CD008BC22B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A54E4291FEB91CD008BC22B /* Assets.xcassets */; };
 		8A54E42D1FEB91CD008BC22B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A54E42B1FEB91CD008BC22B /* Main.storyboard */; };
+		8AE7DB101FEBD8FC00A4508E /* SSLPinningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE7DB0F1FEBD8FC00A4508E /* SSLPinningViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8A54E4221FEB91CD008BC22B /* MobileAppKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAppKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A54E4251FEB91CD008BC22B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8A54E4271FEB91CD008BC22B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A54E4271FEB91CD008BC22B /* IconGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconGeneratorViewController.swift; sourceTree = "<group>"; };
 		8A54E4291FEB91CD008BC22B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A54E42C1FEB91CD008BC22B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A54E42E1FEB91CD008BC22B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A54E42F1FEB91CD008BC22B /* MobileAppKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MobileAppKit.entitlements; sourceTree = "<group>"; };
+		8AE7DB0F1FEBD8FC00A4508E /* SSLPinningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSLPinningViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				8A54E4251FEB91CD008BC22B /* AppDelegate.swift */,
-				8A54E4271FEB91CD008BC22B /* ViewController.swift */,
+				8A54E4271FEB91CD008BC22B /* IconGeneratorViewController.swift */,
+				8AE7DB0F1FEBD8FC00A4508E /* SSLPinningViewController.swift */,
 				8A54E4291FEB91CD008BC22B /* Assets.xcassets */,
 				8A54E42B1FEB91CD008BC22B /* Main.storyboard */,
 				8A54E42E1FEB91CD008BC22B /* Info.plist */,
@@ -134,7 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A54E4281FEB91CD008BC22B /* ViewController.swift in Sources */,
+				8AE7DB101FEBD8FC00A4508E /* SSLPinningViewController.swift in Sources */,
+				8A54E4281FEB91CD008BC22B /* IconGeneratorViewController.swift in Sources */,
 				8A54E4261FEB91CD008BC22B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  IconGeneratorViewController.swift
 //  AppIconResizer
 //
 //  Created by Aykut Ersahin on 21.12.2017.
@@ -8,12 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
-    
-    
-    
-    
-    
+class IconGeneratorViewController: NSViewController {
     
     
     
