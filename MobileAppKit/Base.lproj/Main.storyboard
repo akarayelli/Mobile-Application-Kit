@@ -345,6 +345,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="generateIcons:" target="XfG-lQ-9wD" id="hB3-1l-ihw"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sUn-3I-5c5">
                                 <rect key="frame" x="394" y="81" width="92" height="35"/>
@@ -356,6 +359,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="browseExportDirectory:" target="XfG-lQ-9wD" id="aRs-ec-8ZV"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hA4-UT-58R">
                                 <rect key="frame" x="18" y="116" width="464" height="20"/>
@@ -465,7 +471,27 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="checkBox120x120" destination="kjh-1A-nsj" id="02l-Up-dc8"/>
+                        <outlet property="checkBox144x144" destination="C5u-AQ-TW8" id="jC2-Hs-4yr"/>
+                        <outlet property="checkBox152x152" destination="Jwe-P0-K5T" id="aqz-b5-QhB"/>
+                        <outlet property="checkBox167x167" destination="J2W-QL-pdB" id="LM6-b1-ig4"/>
+                        <outlet property="checkBox180x180" destination="QDh-cD-U7N" id="Jwm-ZN-aPw"/>
+                        <outlet property="checkBox192x192" destination="bv7-6C-fYA" id="003-1f-IqF"/>
+                        <outlet property="checkBox20x20" destination="uhT-2M-Tls" id="Q84-6e-YFY"/>
+                        <outlet property="checkBox29x29" destination="NkX-R2-pk0" id="fy4-ZQ-B5j"/>
+                        <outlet property="checkBox40x40" destination="x57-uE-dR1" id="zSI-U4-Nmr"/>
+                        <outlet property="checkBox48x48" destination="vdU-az-8Cl" id="bqe-p0-Sc3"/>
+                        <outlet property="checkBox58x58" destination="AxN-t0-OBe" id="fkJ-gE-dZV"/>
+                        <outlet property="checkBox60x60" destination="BCL-0K-57A" id="nnV-lb-3ei"/>
+                        <outlet property="checkBox72x72" destination="b0B-B0-saE" id="vV9-t0-Mj9"/>
+                        <outlet property="checkBox76x76" destination="4U8-YF-gOL" id="2jn-DU-4VZ"/>
+                        <outlet property="checkBox80x80" destination="DAd-Bj-F8x" id="emI-Ic-Px9"/>
+                        <outlet property="checkBox87x87" destination="mpH-Kk-j63" id="43M-LM-53Q"/>
+                        <outlet property="checkBox96x96" destination="lm2-c9-Urt" id="Dyn-kc-eio"/>
+                        <outlet property="checkBoxOther" destination="ZJE-Fv-jKP" id="qaR-TN-EuH"/>
+                        <outlet property="textFieldExportDirectoryURL" destination="apI-JU-Gsc" id="rA3-eL-UvH"/>
                         <outlet property="textFieldImageURL" destination="cqb-vn-C2k" id="xTn-0i-9O8"/>
+                        <outlet property="textfieldOther" destination="lhU-i8-BeP" id="FlA-12-pb0"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -475,7 +501,7 @@
         <!--Mobile App Kit-->
         <scene sceneID="0uL-6k-lyi">
             <objects>
-                <tabViewController title="Mobile App Kit" showSeguePresentationStyle="single" selectedTabViewItemIndex="1" id="aC3-hM-wWy" sceneMemberID="viewController">
+                <tabViewController title="Mobile App Kit" showSeguePresentationStyle="single" selectedTabViewItemIndex="0" id="aC3-hM-wWy" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem id="Tm2-ZU-BMj"/>
                         <tabViewItem label="SSL Pinning" identifier="" id="MsP-4s-jwB"/>

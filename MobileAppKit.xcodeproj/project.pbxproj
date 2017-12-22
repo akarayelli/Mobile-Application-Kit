@@ -12,6 +12,7 @@
 		8A54E42A1FEB91CD008BC22B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A54E4291FEB91CD008BC22B /* Assets.xcassets */; };
 		8A54E42D1FEB91CD008BC22B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A54E42B1FEB91CD008BC22B /* Main.storyboard */; };
 		8AE7DB101FEBD8FC00A4508E /* SSLPinningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE7DB0F1FEBD8FC00A4508E /* SSLPinningViewController.swift */; };
+		8AEB0BB01FECF58A00CFA04E /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEB0BAF1FECF58A00CFA04E /* NSImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		8A54E42E1FEB91CD008BC22B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A54E42F1FEB91CD008BC22B /* MobileAppKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MobileAppKit.entitlements; sourceTree = "<group>"; };
 		8AE7DB0F1FEBD8FC00A4508E /* SSLPinningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSLPinningViewController.swift; sourceTree = "<group>"; };
+		8AEB0BAF1FECF58A00CFA04E /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +64,17 @@
 				8A54E42B1FEB91CD008BC22B /* Main.storyboard */,
 				8A54E42E1FEB91CD008BC22B /* Info.plist */,
 				8A54E42F1FEB91CD008BC22B /* MobileAppKit.entitlements */,
+				8AEB0BAE1FECF56F00CFA04E /* Extensions */,
 			);
 			path = MobileAppKit;
+			sourceTree = "<group>";
+		};
+		8AEB0BAE1FECF56F00CFA04E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8AEB0BAF1FECF58A00CFA04E /* NSImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AEB0BB01FECF58A00CFA04E /* NSImage.swift in Sources */,
 				8AE7DB101FEBD8FC00A4508E /* SSLPinningViewController.swift in Sources */,
 				8A54E4281FEB91CD008BC22B /* IconGeneratorViewController.swift in Sources */,
 				8A54E4261FEB91CD008BC22B /* AppDelegate.swift in Sources */,
