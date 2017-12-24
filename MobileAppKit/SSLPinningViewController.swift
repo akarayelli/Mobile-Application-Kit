@@ -19,6 +19,10 @@ class SSLPinningViewController: NSViewController {
     @IBOutlet weak var resultTextField: NSTextField!
     @IBOutlet weak var parseButton: NSButton!
     
+    @IBOutlet weak var certificateDownloadPathTextField: NSTextField!
+    @IBOutlet weak var browseButton: NSButton!
+    @IBOutlet weak var downloadButton: NSButton!
+    
     @objc dynamic var isRunning = false
     var outputPipe:Pipe!
     var buildTask:Process!
@@ -34,32 +38,67 @@ class SSLPinningViewController: NSViewController {
         var arguments:[String] = []
         arguments.append(pinningURLTextField.stringValue)
             
-        parseButton.isEnabled = false
         
-        runScript(arguments)
+        runScript(arguments, scriptName: "PinningScript")
+    }
+    
+    @IBAction func downloadButtonAction(_ sender: NSButton) {
+        
+        var arguments:[String] = []
+        arguments.append(pinningURLTextField.stringValue)
+        arguments.append(certificateDownloadPathTextField.stringValue)
+        runScript(arguments, scriptName: "CertDownloadScript")
+        
     }
     
     
-    func runScript(_ arguments:[String]) {
+    @IBAction func browseButtonAction(_ sender: NSButton) {
+        
+        let dialog = NSOpenPanel();
+        dialog.title                   = "Choose directory to export certificate";
+        dialog.showsResizeIndicator    = true
+        dialog.showsHiddenFiles        = false
+        dialog.canChooseFiles          = false
+        dialog.canChooseDirectories    = true
+        dialog.canCreateDirectories    = true
+        dialog.allowsMultipleSelection = false
+        
+        if (dialog.runModal() == .OK) {
+            if let result = dialog.url {
+                if (result.isFileURL) {
+                    if FileManager.default.fileExists(atPath: result.path) {
+                        certificateDownloadPathTextField.stringValue = result.path
+                    }
+                }
+            }
+        }
+        else {
+            return
+        }
+    }
+    
+    
+    func runScript(_ arguments:[String]?, scriptName: String!) {
         
         isRunning = true
         let taskQueue = DispatchQueue.global(qos: DispatchQoS.QoSClass.background)
 
         taskQueue.async {
             
-            guard let path = Bundle.main.path(forResource: "PinningScript",ofType:"command") else {
-                print("Unable to locate PinningScript.command")
+            guard let path = Bundle.main.path(forResource: scriptName,ofType:"command") else {
+                print("Unable to locate " + scriptName)
                 return
             }
             
             self.buildTask = Process()
             self.buildTask.launchPath = path
-            self.buildTask.arguments = arguments
+            if(arguments != nil){
+                self.buildTask.arguments = arguments
+            }
             
             self.buildTask.terminationHandler = {
                 task in
                 DispatchQueue.main.async(execute: {
-                    self.parseButton.isEnabled = true
                     self.isRunning = false
                 })
                 
@@ -88,9 +127,7 @@ class SSLPinningViewController: NSViewController {
             
             //5.
             DispatchQueue.main.async(execute: {
-                let previousOutput = self.resultTextField.stringValue
-                let nextOutput = previousOutput + "\n" + outputString
-                self.resultTextField.stringValue = nextOutput
+                self.resultTextField.stringValue = outputString
             })
             
             self.outputPipe.fileHandleForReading.waitForDataInBackgroundAndNotify()

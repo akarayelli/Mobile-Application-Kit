@@ -11,6 +11,7 @@
 		0FCD20211FEE7E5200E4F839 /* certificate_pinning.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FCD20201FEE7E5200E4F839 /* certificate_pinning.png */; };
 		0FCD20241FEFA10F00E4F839 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCD20231FEE850A00E4F839 /* Cocoa.framework */; };
 		0FCD20261FEFB57100E4F839 /* CertDownloadScript.command in Resources */ = {isa = PBXBuildFile; fileRef = 0FCD20251FEFB57100E4F839 /* CertDownloadScript.command */; };
+		0FCD20281FEFE33A00E4F839 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FCD20271FEFE33A00E4F839 /* down.png */; };
 		8A54E4261FEB91CD008BC22B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E4251FEB91CD008BC22B /* AppDelegate.swift */; };
 		8A54E4281FEB91CD008BC22B /* IconGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E4271FEB91CD008BC22B /* IconGeneratorViewController.swift */; };
 		8A54E42A1FEB91CD008BC22B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A54E4291FEB91CD008BC22B /* Assets.xcassets */; };
@@ -23,7 +24,8 @@
 		0FCD201D1FEE7D1800E4F839 /* PinningScript.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = PinningScript.command; sourceTree = "<group>"; };
 		0FCD20201FEE7E5200E4F839 /* certificate_pinning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = certificate_pinning.png; sourceTree = "<group>"; };
 		0FCD20231FEE850A00E4F839 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		0FCD20251FEFB57100E4F839 /* CertDownloadScript.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = CertDownloadScript.command; sourceTree = "<group>"; };
+		0FCD20251FEFB57100E4F839 /* CertDownloadScript.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; lineEnding = 0; path = CertDownloadScript.command; sourceTree = "<group>"; };
+		0FCD20271FEFE33A00E4F839 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
 		8A54E4221FEB91CD008BC22B /* MobileAppKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAppKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A54E4251FEB91CD008BC22B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A54E4271FEB91CD008BC22B /* IconGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconGeneratorViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 		0FCD201F1FEE7E3C00E4F839 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0FCD20271FEFE33A00E4F839 /* down.png */,
 				0FCD20201FEE7E5200E4F839 /* certificate_pinning.png */,
 			);
 			path = Images;
@@ -178,6 +181,7 @@
 				8A54E42D1FEB91CD008BC22B /* Main.storyboard in Resources */,
 				0FCD20261FEFB57100E4F839 /* CertDownloadScript.command in Resources */,
 				0FCD20211FEE7E5200E4F839 /* certificate_pinning.png in Resources */,
+				0FCD20281FEFE33A00E4F839 /* down.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +323,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MobileAppKit/MobileAppKit.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -338,7 +341,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MobileAppKit/MobileAppKit.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;

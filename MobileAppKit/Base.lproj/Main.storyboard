@@ -536,15 +536,15 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KGS-Vn-sAQ">
-                                <rect key="frame" x="96" y="107" width="309" height="243"/>
+                                <rect key="frame" x="125" y="173" width="250" height="197"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="309" id="RcG-Ai-ThW"/>
+                                    <constraint firstAttribute="width" constant="250" id="RcG-Ai-ThW"/>
                                     <constraint firstAttribute="width" secondItem="KGS-Vn-sAQ" secondAttribute="height" multiplier="103:81" id="nk7-iG-YoC"/>
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="certificate_pinning" id="szM-0v-UIb"/>
                             </imageView>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="31X-4H-wl3">
-                                <rect key="frame" x="56" y="77" width="352" height="22"/>
+                                <rect key="frame" x="56" y="151" width="352" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="payflexdemo.innova.com.tr:443" drawsBackground="YES" id="Hci-aN-5Sq">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -552,7 +552,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CU5-w8-JYY">
-                                <rect key="frame" x="412" y="70" width="74" height="32"/>
+                                <rect key="frame" x="412" y="144" width="74" height="32"/>
                                 <buttonCell key="cell" type="push" title="Parse" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wj4-ma-QeF">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -562,7 +562,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ngW-AR-dzx">
-                                <rect key="frame" x="8" y="79" width="30" height="17"/>
+                                <rect key="frame" x="8" y="153" width="30" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="URL" id="Twg-c1-DqK">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -570,7 +570,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wkA-Ae-tUp">
-                                <rect key="frame" x="8" y="37" width="42" height="17"/>
+                                <rect key="frame" x="8" y="121" width="42" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Result" id="LbQ-BX-ui3">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -578,32 +578,84 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8CX-Mf-QSu">
-                                <rect key="frame" x="56" y="35" width="424" height="22"/>
+                                <rect key="frame" x="56" y="119" width="424" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="JKq-Yz-ZlC">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ht0-aj-qdb">
+                                <rect key="frame" x="10" y="42" width="355" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="cX6-R2-cPQ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6Pj-gn-pYG">
+                                <rect key="frame" x="364" y="35" width="85" height="32"/>
+                                <buttonCell key="cell" type="push" title="Browse" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DGv-fB-U22">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="browseButtonAction:" target="WPM-IR-6l4" id="jEA-2g-XiJ"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eK2-01-xQQ">
+                                <rect key="frame" x="8" y="72" width="217" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Select SSL certificate export folder" id="8Re-I3-evF">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="CVX-ZF-gXz">
+                                <rect key="frame" x="448" y="36" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="6dB-oz-g6l"/>
+                                    <constraint firstAttribute="width" constant="32" id="De2-qc-k2n"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="down" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="V9F-xm-XpF">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="downloadButtonAction:" target="WPM-IR-6l4" id="8UN-YG-Gjb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="CU5-w8-JYY" firstAttribute="trailing" secondItem="8CX-Mf-QSu" secondAttribute="trailing" id="3UK-u9-c2h"/>
-                            <constraint firstItem="8CX-Mf-QSu" firstAttribute="top" secondItem="31X-4H-wl3" secondAttribute="bottom" constant="20" id="4Hf-HL-PnM"/>
+                            <constraint firstItem="8CX-Mf-QSu" firstAttribute="top" secondItem="31X-4H-wl3" secondAttribute="bottom" constant="10" id="4Hf-HL-PnM"/>
                             <constraint firstItem="ngW-AR-dzx" firstAttribute="leading" secondItem="Yej-m6-mhz" secondAttribute="leading" constant="10" id="691-ml-O4i"/>
                             <constraint firstItem="wkA-Ae-tUp" firstAttribute="leading" secondItem="ngW-AR-dzx" secondAttribute="leading" id="6je-Eu-XiZ"/>
                             <constraint firstItem="CU5-w8-JYY" firstAttribute="leading" secondItem="31X-4H-wl3" secondAttribute="trailing" constant="10" id="9TH-Cp-SOX"/>
                             <constraint firstAttribute="trailing" secondItem="CU5-w8-JYY" secondAttribute="trailing" constant="20" id="A2x-3Y-1ac"/>
-                            <constraint firstItem="31X-4H-wl3" firstAttribute="top" secondItem="KGS-Vn-sAQ" secondAttribute="bottom" constant="8" id="Buq-UB-xaT"/>
+                            <constraint firstItem="31X-4H-wl3" firstAttribute="top" secondItem="KGS-Vn-sAQ" secondAttribute="bottom" id="Buq-UB-xaT"/>
                             <constraint firstItem="8CX-Mf-QSu" firstAttribute="leading" secondItem="31X-4H-wl3" secondAttribute="leading" id="Civ-Fo-1z4"/>
                             <constraint firstItem="31X-4H-wl3" firstAttribute="centerY" secondItem="ngW-AR-dzx" secondAttribute="centerY" id="DL8-hf-YlQ"/>
-                            <constraint firstItem="KGS-Vn-sAQ" firstAttribute="top" secondItem="Yej-m6-mhz" secondAttribute="top" constant="20" id="c5J-io-lPQ"/>
+                            <constraint firstItem="6Pj-gn-pYG" firstAttribute="leading" secondItem="Ht0-aj-qdb" secondAttribute="trailing" constant="5" id="EbD-ka-ff7"/>
+                            <constraint firstItem="eK2-01-xQQ" firstAttribute="top" secondItem="8CX-Mf-QSu" secondAttribute="bottom" constant="30" id="HLo-6h-AjG"/>
+                            <constraint firstItem="Ht0-aj-qdb" firstAttribute="top" secondItem="eK2-01-xQQ" secondAttribute="bottom" constant="8" id="PDd-Nu-OCI"/>
+                            <constraint firstItem="CVX-ZF-gXz" firstAttribute="leading" secondItem="6Pj-gn-pYG" secondAttribute="trailing" constant="5" id="Srm-Ys-Rjr"/>
+                            <constraint firstItem="eK2-01-xQQ" firstAttribute="leading" secondItem="wkA-Ae-tUp" secondAttribute="leading" id="Wdt-o0-5j1"/>
+                            <constraint firstItem="Ht0-aj-qdb" firstAttribute="leading" secondItem="wkA-Ae-tUp" secondAttribute="leading" id="aTx-vT-CML"/>
+                            <constraint firstItem="KGS-Vn-sAQ" firstAttribute="top" secondItem="Yej-m6-mhz" secondAttribute="top" id="c5J-io-lPQ"/>
                             <constraint firstItem="8CX-Mf-QSu" firstAttribute="centerY" secondItem="wkA-Ae-tUp" secondAttribute="centerY" id="iP2-he-YkT"/>
                             <constraint firstItem="KGS-Vn-sAQ" firstAttribute="centerX" secondItem="Yej-m6-mhz" secondAttribute="centerX" id="jOl-Ye-Oz6"/>
+                            <constraint firstItem="CVX-ZF-gXz" firstAttribute="centerY" secondItem="6Pj-gn-pYG" secondAttribute="centerY" id="lMv-Nw-MCz"/>
+                            <constraint firstItem="6Pj-gn-pYG" firstAttribute="centerY" secondItem="Ht0-aj-qdb" secondAttribute="centerY" id="m29-AN-vHb"/>
+                            <constraint firstItem="CVX-ZF-gXz" firstAttribute="trailing" secondItem="8CX-Mf-QSu" secondAttribute="trailing" id="p8L-Ox-9PT"/>
                             <constraint firstItem="31X-4H-wl3" firstAttribute="leading" secondItem="ngW-AR-dzx" secondAttribute="trailing" constant="20" id="sSb-5P-hIQ"/>
                             <constraint firstItem="CU5-w8-JYY" firstAttribute="centerY" secondItem="31X-4H-wl3" secondAttribute="centerY" id="w9H-IU-38u"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="browseButton" destination="6Pj-gn-pYG" id="BMJ-r0-fJ5"/>
+                        <outlet property="certificateDownloadPathTextField" destination="Ht0-aj-qdb" id="nV0-lS-C2A"/>
+                        <outlet property="downloadButton" destination="CVX-ZF-gXz" id="xr5-gL-zSs"/>
                         <outlet property="parseButton" destination="CU5-w8-JYY" id="heF-ef-wmD"/>
                         <outlet property="pinningURLTextField" destination="31X-4H-wl3" id="efw-qn-EdW"/>
                         <outlet property="resultTextField" destination="8CX-Mf-QSu" id="8Bv-9I-WMv"/>
@@ -616,5 +668,6 @@
     </scenes>
     <resources>
         <image name="certificate_pinning" width="309" height="184"/>
+        <image name="down" width="512" height="512"/>
     </resources>
 </document>
