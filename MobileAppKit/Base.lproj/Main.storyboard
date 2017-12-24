@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -533,11 +534,87 @@
                     <view key="view" id="Yej-m6-mhz">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="370"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KGS-Vn-sAQ">
+                                <rect key="frame" x="96" y="107" width="309" height="243"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="309" id="RcG-Ai-ThW"/>
+                                    <constraint firstAttribute="width" secondItem="KGS-Vn-sAQ" secondAttribute="height" multiplier="103:81" id="nk7-iG-YoC"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="certificate_pinning" id="szM-0v-UIb"/>
+                            </imageView>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="31X-4H-wl3">
+                                <rect key="frame" x="56" y="77" width="352" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="payflexdemo.innova.com.tr:443" drawsBackground="YES" id="Hci-aN-5Sq">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CU5-w8-JYY">
+                                <rect key="frame" x="412" y="70" width="74" height="32"/>
+                                <buttonCell key="cell" type="push" title="Parse" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wj4-ma-QeF">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="parseButtonAction:" target="WPM-IR-6l4" id="k4f-6D-NHa"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ngW-AR-dzx">
+                                <rect key="frame" x="8" y="79" width="30" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="URL" id="Twg-c1-DqK">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wkA-Ae-tUp">
+                                <rect key="frame" x="8" y="37" width="42" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Result" id="LbQ-BX-ui3">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8CX-Mf-QSu">
+                                <rect key="frame" x="56" y="35" width="424" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="JKq-Yz-ZlC">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="CU5-w8-JYY" firstAttribute="trailing" secondItem="8CX-Mf-QSu" secondAttribute="trailing" id="3UK-u9-c2h"/>
+                            <constraint firstItem="8CX-Mf-QSu" firstAttribute="top" secondItem="31X-4H-wl3" secondAttribute="bottom" constant="20" id="4Hf-HL-PnM"/>
+                            <constraint firstItem="ngW-AR-dzx" firstAttribute="leading" secondItem="Yej-m6-mhz" secondAttribute="leading" constant="10" id="691-ml-O4i"/>
+                            <constraint firstItem="wkA-Ae-tUp" firstAttribute="leading" secondItem="ngW-AR-dzx" secondAttribute="leading" id="6je-Eu-XiZ"/>
+                            <constraint firstItem="CU5-w8-JYY" firstAttribute="leading" secondItem="31X-4H-wl3" secondAttribute="trailing" constant="10" id="9TH-Cp-SOX"/>
+                            <constraint firstAttribute="trailing" secondItem="CU5-w8-JYY" secondAttribute="trailing" constant="20" id="A2x-3Y-1ac"/>
+                            <constraint firstItem="31X-4H-wl3" firstAttribute="top" secondItem="KGS-Vn-sAQ" secondAttribute="bottom" constant="8" id="Buq-UB-xaT"/>
+                            <constraint firstItem="8CX-Mf-QSu" firstAttribute="leading" secondItem="31X-4H-wl3" secondAttribute="leading" id="Civ-Fo-1z4"/>
+                            <constraint firstItem="31X-4H-wl3" firstAttribute="centerY" secondItem="ngW-AR-dzx" secondAttribute="centerY" id="DL8-hf-YlQ"/>
+                            <constraint firstItem="KGS-Vn-sAQ" firstAttribute="top" secondItem="Yej-m6-mhz" secondAttribute="top" constant="20" id="c5J-io-lPQ"/>
+                            <constraint firstItem="8CX-Mf-QSu" firstAttribute="centerY" secondItem="wkA-Ae-tUp" secondAttribute="centerY" id="iP2-he-YkT"/>
+                            <constraint firstItem="KGS-Vn-sAQ" firstAttribute="centerX" secondItem="Yej-m6-mhz" secondAttribute="centerX" id="jOl-Ye-Oz6"/>
+                            <constraint firstItem="31X-4H-wl3" firstAttribute="leading" secondItem="ngW-AR-dzx" secondAttribute="trailing" constant="20" id="sSb-5P-hIQ"/>
+                            <constraint firstItem="CU5-w8-JYY" firstAttribute="centerY" secondItem="31X-4H-wl3" secondAttribute="centerY" id="w9H-IU-38u"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="parseButton" destination="CU5-w8-JYY" id="heF-ef-wmD"/>
+                        <outlet property="pinningURLTextField" destination="31X-4H-wl3" id="efw-qn-EdW"/>
+                        <outlet property="resultTextField" destination="8CX-Mf-QSu" id="8Bv-9I-WMv"/>
+                    </connections>
                 </viewController>
                 <customObject id="2Sy-42-0Dk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="883"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="certificate_pinning" width="309" height="184"/>
+    </resources>
 </document>

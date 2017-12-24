@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FCD201E1FEE7D1800E4F839 /* PinningScript.command in Resources */ = {isa = PBXBuildFile; fileRef = 0FCD201D1FEE7D1800E4F839 /* PinningScript.command */; };
+		0FCD20211FEE7E5200E4F839 /* certificate_pinning.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FCD20201FEE7E5200E4F839 /* certificate_pinning.png */; };
+		0FCD20241FEFA10F00E4F839 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCD20231FEE850A00E4F839 /* Cocoa.framework */; };
+		0FCD20261FEFB57100E4F839 /* CertDownloadScript.command in Resources */ = {isa = PBXBuildFile; fileRef = 0FCD20251FEFB57100E4F839 /* CertDownloadScript.command */; };
 		8A54E4261FEB91CD008BC22B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E4251FEB91CD008BC22B /* AppDelegate.swift */; };
 		8A54E4281FEB91CD008BC22B /* IconGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E4271FEB91CD008BC22B /* IconGeneratorViewController.swift */; };
 		8A54E42A1FEB91CD008BC22B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A54E4291FEB91CD008BC22B /* Assets.xcassets */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FCD201D1FEE7D1800E4F839 /* PinningScript.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = PinningScript.command; sourceTree = "<group>"; };
+		0FCD20201FEE7E5200E4F839 /* certificate_pinning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = certificate_pinning.png; sourceTree = "<group>"; };
+		0FCD20231FEE850A00E4F839 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0FCD20251FEFB57100E4F839 /* CertDownloadScript.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = CertDownloadScript.command; sourceTree = "<group>"; };
 		8A54E4221FEB91CD008BC22B /* MobileAppKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAppKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A54E4251FEB91CD008BC22B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A54E4271FEB91CD008BC22B /* IconGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconGeneratorViewController.swift; sourceTree = "<group>"; };
@@ -32,17 +40,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FCD20241FEFA10F00E4F839 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FCD201B1FEE7C6600E4F839 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0FCD201F1FEE7E3C00E4F839 /* Images */,
+				0FCD201D1FEE7D1800E4F839 /* PinningScript.command */,
+				0FCD20251FEFB57100E4F839 /* CertDownloadScript.command */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0FCD201F1FEE7E3C00E4F839 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0FCD20201FEE7E5200E4F839 /* certificate_pinning.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		0FCD20221FEE850A00E4F839 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FCD20231FEE850A00E4F839 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8A54E4191FEB91CD008BC22B = {
 			isa = PBXGroup;
 			children = (
 				8A54E4241FEB91CD008BC22B /* MobileAppKit */,
 				8A54E4231FEB91CD008BC22B /* Products */,
+				0FCD20221FEE850A00E4F839 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +100,7 @@
 				8A54E42B1FEB91CD008BC22B /* Main.storyboard */,
 				8A54E42E1FEB91CD008BC22B /* Info.plist */,
 				8A54E42F1FEB91CD008BC22B /* MobileAppKit.entitlements */,
+				0FCD201B1FEE7C6600E4F839 /* Resources */,
 				8AEB0BAE1FECF56F00CFA04E /* Extensions */,
 			);
 			path = MobileAppKit;
@@ -137,7 +174,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A54E42A1FEB91CD008BC22B /* Assets.xcassets in Resources */,
+				0FCD201E1FEE7D1800E4F839 /* PinningScript.command in Resources */,
 				8A54E42D1FEB91CD008BC22B /* Main.storyboard in Resources */,
+				0FCD20261FEFB57100E4F839 /* CertDownloadScript.command in Resources */,
+				0FCD20211FEE7E5200E4F839 /* certificate_pinning.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +323,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = JGLDE732TF;
+				DEVELOPMENT_TEAM = 75C2X73JT4;
 				INFOPLIST_FILE = MobileAppKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -302,7 +342,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = JGLDE732TF;
+				DEVELOPMENT_TEAM = 75C2X73JT4;
 				INFOPLIST_FILE = MobileAppKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
