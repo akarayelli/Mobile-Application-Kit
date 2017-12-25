@@ -112,6 +112,8 @@ class SSLPinningViewController: NSViewController {
     
     
     func captureStandardOutputAndRouteToTextView(_ task:Process) {
+        
+        print("Will capture output and write to textField ")
 
         outputPipe = Pipe()
         task.standardOutput = outputPipe
@@ -121,13 +123,21 @@ class SSLPinningViewController: NSViewController {
         NotificationCenter.default.addObserver(forName: NSNotification.Name.NSFileHandleDataAvailable, object: outputPipe.fileHandleForReading , queue: nil) {
             notification in
             
-            //4.
+            print("NSFileHandleDataAvailable notification catched!")
+            
             let output = self.outputPipe.fileHandleForReading.availableData
             let outputString = String(data: output, encoding: String.Encoding.utf8) ?? ""
-            
-            //5.
+
             DispatchQueue.main.async(execute: {
-                self.resultTextField.stringValue = outputString
+                print("*****OUTPUT: " + outputString)
+                
+                let previousOutput = self.resultTextField.stringValue
+                var nextOutput = previousOutput
+                if(outputString != ""){
+                    nextOutput += "\n" + outputString
+                }
+                self.resultTextField.stringValue = nextOutput
+
             })
             
             self.outputPipe.fileHandleForReading.waitForDataInBackgroundAndNotify()

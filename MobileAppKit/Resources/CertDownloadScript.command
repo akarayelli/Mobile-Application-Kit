@@ -12,6 +12,7 @@ cd "$2"
 
 openssl s_client -showcerts -connect "$1" </dev/null 2>/dev/null|openssl x509 -outform PEM >mycertfile.pem
 openssl x509 -in mycertfile.pem -outform der -out certificate.cer
+rm mycertfile.pem
 
 
 
